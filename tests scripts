@@ -1,0 +1,13 @@
+pm.test("Response Assertions", function(){ 
+    pm.response.to.be.ok;
+    pm.response.to.be.json;
+});
+
+#header sample
+pm.test("Header response is present", function () {
+    pm.response.to.have.header("Content-Type", "application/json;charset=utf-8");
+    pm.response.to.have.header("X-Content-Type-Options", "nosniff");
+    pm.response.to.have.header("Server", "Pepyaka/1.19.10");
+    pm.response.to.have.header("Conection", "keep-alive");
+});
+
