@@ -1,0 +1,13 @@
+if(responseCode.code === 200) {
+    tests["Backend is available, response code is 200"] = true;
+} else if (responseCode.code === 401) {
+    tests["Not authorised, check access token or Log in"] = false;
+} else if (responseCode.code === 403) {
+    tests["Forbiden"] = false;
+} else if (responseCode.code === 404) {
+    tests["Not Found. Check if you made correct request"] = false;
+} else if (responseCode.code === 422) {
+    tests["he instance is not valid"] = false;
+} else {
+    tests["Something went wrong. Check response body"] = false;
+}
